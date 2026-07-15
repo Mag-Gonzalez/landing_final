@@ -11,8 +11,21 @@ let testimonialIndex = 0;
 let testimonialTimer;
 
 function toggleMenu() {
+  const opening = !mobileMenu.classList.contains('open');
   mobileMenu.classList.toggle('open');
   menuToggle.classList.toggle('open');
+  // accesibilidad
+  menuToggle.setAttribute('aria-expanded', String(opening));
+
+  // stagger de items del menú mobile
+  const items = Array.from(mobileMenu.querySelectorAll('a'));
+  items.forEach((it, i) => {
+    if (opening) {
+      it.style.transitionDelay = `${i * 45}ms`;
+    } else {
+      it.style.transitionDelay = `${(items.length - i) * 15}ms`;
+    }
+  });
 }
 
 menuToggle?.addEventListener('click', toggleMenu);
@@ -101,5 +114,91 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > 1024 && mobileMenu.classList.contains('open')) {
     mobileMenu.classList.remove('open');
     menuToggle.classList.remove('open');
+  }
+});
+
+/* ---- Animaciones JS adicionales ---- */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Título: añadir clase para activar animación escalonada
+  const title = document.querySelector('.hero-title');
+  if (title) {
+    const parts = Array.from(title.querySelectorAll('span'));
+    parts.forEach((el, i) => {
+      el.style.animationDelay = `${i * 80}ms`;
+    });
+    // small timeout so CSS transitions apply after paint
+    requestAnimationFrame(() => title.classList.add('animate'));
+  }
+
+  // Reveal on scroll para secciones y tarjetas
+  const revealSelector = '.section .card, .section .dish-card, .section .stat-card, .testimonial-card, .map-card, .hero-badge';
+  const revealElements = Array.from(document.querySelectorAll(revealSelector));
+  revealElements.forEach(el => el.classList.add('reveal'));
+
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    revealElements.forEach(el => obs.observe(el));
+  } else {
+    // Fallback: show all
+    revealElements.forEach(el => el.classList.add('in-view'));
+  }
+
+  // Parallax ligero para partículas en hero (mouse)
+  const hero = document.querySelector('.hero');
+  const particles = Array.from(document.querySelectorAll('.hero-particles span'));
+  if (hero && particles.length) {
+    let lastX = 0, lastY = 0;
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      // apply small transforms
+      particles.forEach((p, i) => {
+        const depth = (i % 5) * 0.6 + 0.6;
+        const tx = px * 18 * depth;
+        const ty = py * 12 * depth;
+        p.style.transform = `translate(${tx}px, ${ty}px)`;
+      });
+    });
+    hero.addEventListener('mouseleave', () => {
+      particles.forEach(p => p.style.transform = 'translate(0,0)');
+    });
+  }
+
+  // Micro-interacción: ripple effect en botones
+  const buttons = Array.from(document.querySelectorAll('.button'));
+  buttons.forEach(btn => {
+    btn.addEventListener('click', (ev) => {
+      const rect = btn.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      const size = Math.max(rect.width, rect.height) * 1.2;
+      ripple.style.width = ripple.style.height = `${size}px`;
+      const x = ev.clientX - rect.left - size/2;
+      const y = ev.clientY - rect.top - size/2;
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+      ripple.style.transition = 'transform 520ms cubic-bezier(.2,.9,.2,1), opacity 520ms ease';
+      btn.appendChild(ripple);
+      requestAnimationFrame(() => ripple.style.transform = 'scale(1)');
+      setTimeout(() => {
+        ripple.style.opacity = '0';
+        setTimeout(() => ripple.remove(), 600);
+      }, 400);
+    });
+  });
+
+  // Ensure toggle has aria attributes
+  if (menuToggle) {
+    menuToggle.setAttribute('aria-expanded', String(menuToggle.classList.contains('open')));
   }
 });
