@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReserVa — Reserva, preordena y disfruta</title>
+    <meta name="description" content="ReserVa es la plataforma premium para reservar mesas, consultar disponibilidad en tiempo real y preordenar platos en los restaurantes más exclusivos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="noise-overlay"></div>
+
+      <header class="site-header">
+        <div class="header-inner container">
+          <a href="#inicio" class="brand">
+            <span class="brand-icon">V</span>
+            <span class="brand-label">Reser<span>Va</span></span>
+          </a>
+
+          <nav class="desktop-nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#mapa-mesas">Mapa de mesas</a>
+            <a href="#preordena">Preordena</a>
+            <a href="#opiniones">Opiniones</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+
+          <a href="#hero-form" class="button button-primary">Reservar</a>
+
+          <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="mobile-menu">
+          <a href="#inicio">Inicio</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#mapa-mesas">Mapa de mesas</a>
+          <a href="#preordena">Preordena</a>
+          <a href="#opiniones">Opiniones</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#hero-form" class="button button-primary mobile-button">Reservar</a>
+        </div>
+      </header>
+
+      <main>
+        <section id="inicio" class="hero">
+          <div class="hero-bg"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-glow"></div>
+          <div class="hero-particles">
+            <span style="--x: 12%; --y: 18%; --s: 24px"></span>
+            <span style="--x: 70%; --y: 12%; --s: 18px"></span>
+            <span style="--x: 25%; --y: 70%; --s: 32px"></span>
+            <span style="--x: 85%; --y: 45%; --s: 14px"></span>
+            <span style="--x: 48%; --y: 33%; --s: 20px"></span>
+            <span style="--x: 18%; --y: 48%; --s: 16px"></span>
+          </div>
+
+          <div class="hero-content container">
+            <div class="hero-badge">
+              <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p>La plataforma premium para restaurantes exclusivos</p>
+            </div>
+
+            <h1 class="hero-title">
+              <span>Reserva,</span>
+              <span>preordena</span>
+              <span>y</span>
+              <span class="highlight">disfruta.</span>
+            </h1>
+
+            <p class="hero-copy">
+              ReserVa permite reservar mesas, consultar disponibilidad en tiempo real y preordenar platos en los restaurantes más exclusivos. Una experiencia gastronómica sin fricciones.
+            </p>
+
+            <div id="hero-form" class="hero-form">
+              <div class="form-field">
+                <label>Fecha</label>
+                <input type="date" />
+              </div>
+              <div class="form-field">
+                <label>Hora</label>
+                <select>
+                  <option>13:00</option>
+                  <option>13:30</option>
+                  <option>14:00</option>
+                  <option>14:30</option>
+                  <option>20:00</option>
+                  <option>20:30</option>
+                  <option>21:00</option>
+                  <option>21:30</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label>Personas</label>
+                <select>
+                  <option>1 persona</option>
+                  <option>2 personas</option>
+                  <option>3 personas</option>
+                  <option>4 personas</option>
+                  <option>5 personas</option>
+                  <option>6 personas</option>
+                  <option>+6 personas</option>
+                </select>
+              </div>
+              <button class="button button-accent">Buscar mesa</button>
+            </div>
+          </div>
+
+          <div class="scroll-indicator">
+            <span>Scroll</span>
+            <span class="scroll-line"></span>
+          </div>
+        </section>
+
+        <section class="ticker">
+          <div class="ticker-track">
+            <div class="ticker-item">Reservas en tiempo real</div>
+            <div class="ticker-item">Preorder inteligente</div>
+            <div class="ticker-item">Mapa de mesas interactivo</div>
+            <div class="ticker-item">Dashboard premium</div>
+            <div class="ticker-item">Gestión de clientes</div>
+            <div class="ticker-item">Reportes avanzados</div>
+            <div class="ticker-item">Notificaciones instantáneas</div>
+            <div class="ticker-item">Multi-sede</div>
+            <div class="ticker-item">Reservas en tiempo real</div>
+            <div class="ticker-item">Preorder inteligente</div>
+            <div class="ticker-item">Mapa de mesas interactivo</div>
+            <div class="ticker-item">Dashboard premium</div>
+          </div>
+        </section>
+
+        <section class="section container">
+          <div class="section-header">
+            <span class="section-label">Beneficios</span>
+            <h2>Todo lo que tu restaurante necesita, <span class="highlight">en un solo lugar</span></h2>
+          </div>
+
+          <div class="grid-3">
+            <article class="card glass">
+              <div class="card-icon">📅</div>
+              <h3>Reservas en tiempo real</h3>
+              <p>Disponibilidad instantánea actualizada en vivo. Sin llamadas, sin esperas, sin fricciones.</p>
+            </article>
+            <article class="card glass">
+              <div class="card-icon">⏰</div>
+              <h3>Preorder inteligente</h3>
+              <p>Los comensales preordenan platos desde su mesa virtual. Todo listo al llegar.</p>
+            </article>
+            <article class="card glass">
+              <div class="card-icon">👥</div>
+              <h3>Gestión de clientes</h3>
+              <p>Historial de preferencias, alergias y visitas. Personaliza cada experiencia.</p>
+            </article>
+            <article class="card glass">
+              <div class="card-icon">🔔</div>
+              <h3>Notificaciones automáticas</h3>
+              <p>Confirmaciones, recordatorios y actualizaciones por email y push. Cero ausencias.</p>
+            </article>
+            <article class="card glass">
+              <div class="card-icon">📈</div>
+              <h3>Reportes avanzados</h3>
+              <p>Métricas de ocupación, ingresos y platos más pedidos. Decisiones con datos.</p>
+            </article>
+            <article class="card glass">
+              <div class="card-icon">📱</div>
+              <h3>Multi-dispositivo</h3>
+              <p>Funciona en móvil, tablet y escritorio. Una experiencia impecable en cualquier pantalla.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="como-funciona" class="section container">
+          <div class="section-header">
+            <span class="section-label">Cómo funciona</span>
+            <h2>Cuatro pasos hacia <span class="highlight">la experiencia perfecta</span></h2>
+          </div>
+
+          <div class="timeline">
+            <span class="timeline-line"></span>
+            <article class="step-card">
+              <div class="step-icon">🔎</div>
+              <h3>Explora</h3>
+              <p>Busca restaurantes por ubicación, cocina o disponibilidad en tiempo real.</p>
+            </article>
+            <article class="step-card">
+              <div class="step-icon">🖱️</div>
+              <h3>Reserva</h3>
+              <p>Elige fecha, hora y mesa. Confirmación instantánea sin llamadas.</p>
+            </article>
+            <article class="step-card">
+              <div class="step-icon">🍽️</div>
+              <h3>Preordena</h3>
+              <p>Selecciona platos del menú digital. Todo estará listo cuando llegues.</p>
+            </article>
+            <article class="step-card">
+              <div class="step-icon">🎉</div>
+              <h3>Disfruta</h3>
+              <p>Llega al restaurante y disfruta una experiencia gastronómica sin esperas.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="preordena" class="section container">
+          <div class="section-header flex-space">
+            <div>
+              <span class="section-label">Preordena</span>
+              <h2>Tu menú, <span class="highlight">antes de llegar</span></h2>
+            </div>
+            <p class="section-copy">Explora la carta digital interactiva. Preordena tus platos favoritos y disfrútalos recién preparados al llegar al restaurante.</p>
+          </div>
+
+          <div class="grid-4">
+            <article class="dish-card glass">
+              <div class="dish-image" style="background-image:url('https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div>
+              <div class="dish-tag">Signature</div>
+              <div class="dish-price">€24</div>
+              <div class="dish-body">
+                <h3>Tartar de Atún Rojo</h3>
+                <p>Atún rojo, aguacate, sésamo, aceite de yuzu y microgreens.</p>
+                <button class="button button-secondary">Añadir al preorder</button>
+              </div>
+            </article>
+            <article class="dish-card glass">
+              <div class="dish-image" style="background-image:url('https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div>
+              <div class="dish-tag">Premium</div>
+              <div class="dish-price">€32</div>
+              <div class="dish-body">
+                <h3>Risotto de Trufa Negra</h3>
+                <p>Arroz carnaroli, trufa negra, parmesano envejecido y mantequilla noisette.</p>
+                <button class="button button-secondary">Añadir al preorder</button>
+              </div>
+            </article>
+            <article class="dish-card glass">
+              <div class="dish-image" style="background-image:url('https://images.pexels.com/photos/8472992/pexels-photo-8472992.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div>
+              <div class="dish-tag">Fresco</div>
+              <div class="dish-price">€22</div>
+              <div class="dish-body">
+                <h3>Ceviche de Corvina</h3>
+                <p>Corvina fresca, limón, cebolla morada, ají amarillo y cilantro.</p>
+                <button class="button button-secondary">Añadir al preorder</button>
+              </div>
+            </article>
+            <article class="dish-card glass">
+              <div class="dish-image" style="background-image:url('https://images.pexels.com/photos/1544025/pexels-photo-1544025.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div>
+              <div class="dish-tag">Chef</div>
+              <div class="dish-price">€38</div>
+              <div class="dish-body">
+                <h3>Ossobuco Confitado</h3>
+                <p>Ossobuco de ternera, puré de patata trufada y reducción de vino tinto.</p>
+                <button class="button button-secondary">Añadir al preorder</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="mapa-mesas" class="section container">
+          <div class="section-header">
+            <span class="section-label">Mapa de mesas</span>
+            <h2>Visualiza tu sala <span class="highlight">en tiempo real</span></h2>
+            <p class="section-copy">Cada mesa muestra su estado actual. Los comensales eligen su ubicación favorita al reservar.</p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card glass"><strong>14</strong><span>Total</span></div>
+            <div class="stat-card glass stat-free"><strong>6</strong><span>Libres</span></div>
+            <div class="stat-card glass stat-occupied"><strong>5</strong><span>Ocupadas</span></div>
+            <div class="stat-card glass stat-reserved"><strong>3</strong><span>Reservadas</span></div>
+          </div>
+
+          <div class="map-card glass">
+            <div class="map-frame">
+              <div class="map-bar"></div>
+              <div class="map-label">Entrada</div>
+              <div class="map-sidebar">Barra</div>
+
+              <div class="table-node occupied" data-label="Mesa 1 · Ocupada" style="--left:10%; --top:15%;"></div>
+              <div class="table-node free" data-label="Mesa 2 · Libre" style="--left:25%; --top:15%;"></div>
+              <div class="table-node reserved" data-label="Mesa 3 · Reservada" style="--left:40%; --top:15%;"></div>
+              <div class="table-node free" data-label="Mesa 4 · Libre" style="--left:55%; --top:15%;"></div>
+              <div class="table-node occupied" data-label="Mesa 5 · Ocupada" style="--left:70%; --top:15%;"></div>
+              <div class="table-node reserved square" data-label="Mesa 6 · Reservada" style="--left:10%; --top:45%;"></div>
+              <div class="table-node free square" data-label="Mesa 7 · Libre" style="--left:28%; --top:45%;"></div>
+              <div class="table-node occupied square" data-label="Mesa 8 · Ocupada" style="--left:46%; --top:45%;"></div>
+              <div class="table-node free square" data-label="Mesa 9 · Libre" style="--left:64%; --top:45%;"></div>
+              <div class="table-node free" data-label="Mesa 10 · Libre" style="--left:10%; --top:72%;"></div>
+              <div class="table-node occupied" data-label="Mesa 11 · Ocupada" style="--left:25%; --top:72%;"></div>
+              <div class="table-node reserved" data-label="Mesa 12 · Reservada" style="--left:40%; --top:72%;"></div>
+              <div class="table-node free" data-label="Mesa 13 · Libre" style="--left:55%; --top:72%;"></div>
+              <div class="table-node occupied" data-label="Mesa 14 · Ocupada" style="--left:70%; --top:72%;"></div>
+            </div>
+
+            <div class="map-filters">
+              <button class="filter-button" data-status="all">Todo</button>
+              <button class="filter-button" data-status="free">Libres</button>
+              <button class="filter-button" data-status="occupied">Ocupadas</button>
+              <button class="filter-button" data-status="reserved">Reservadas</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section container">
+          <div class="section-header">
+            <span class="section-label">Dashboard</span>
+            <h2>Control total desde <span class="highlight">un solo panel</span></h2>
+          </div>
+
+          <div class="dashboard-tabs">
+            <button class="tab-button active" data-tab="reservas">Reservas</button>
+            <button class="tab-button" data-tab="clientes">Clientes</button>
+            <button class="tab-button" data-tab="carta">Carta</button>
+            <button class="tab-button" data-tab="reportes">Reportes</button>
+          </div>
+
+          <div class="dashboard-frame glass">
+            <div class="dashboard-window">
+              <div class="window-chrome"><span></span><span></span><span></span><span>app.reserva.velvetcode.io</span></div>
+              <div class="dashboard-content">
+                <div class="dashboard-panel active" data-panel="reservas">
+                  <div class="dashboard-stats">
+                    <div><strong>47</strong><span>Hoy</span></div>
+                    <div><strong>38</strong><span>Confirmadas</span></div>
+                    <div><strong>6</strong><span>Pendientes</span></div>
+                    <div><strong>84%</strong><span>Ocupación</span></div>
+                  </div>
+                  <div class="dashboard-list">
+                    <div class="dashboard-item"><span>Elena García</span><span>Mesa 3 · 4 personas</span><span>13:00</span><span class="badge confirmed">Confirmada</span></div>
+                    <div class="dashboard-item"><span>Carlos Ruiz</span><span>Mesa 7 · 2 personas</span><span>13:30</span><span class="badge pending">Pendiente</span></div>
+                    <div class="dashboard-item"><span>María López</span><span>Mesa 1 · 6 personas</span><span>14:00</span><span class="badge confirmed">Confirmada</span></div>
+                    <div class="dashboard-item"><span>James Wilson</span><span>Mesa 8 · 3 personas</span><span>20:30</span><span class="badge seated">Sentado</span></div>
+                    <div class="dashboard-item"><span>Sofia Chen</span><span>Mesa 12 · 2 personas</span><span>21:00</span><span class="badge confirmed">Confirmada</span></div>
+                  </div>
+                </div>
+                <div class="dashboard-panel" data-panel="clientes">
+                  <div class="dashboard-stats">
+                    <div><strong>1,247</strong><span>Total clientes</span></div>
+                    <div><strong>89</strong><span>VIP</span></div>
+                    <div><strong>62</strong><span>Nuevos (mes)</span></div>
+                    <div><strong>73%</strong><span>Retención</span></div>
+                  </div>
+                  <div class="dashboard-grid">
+                    <div class="profile-card"><strong>E</strong><span>Elena García</span><span>12 visitas · Tartar de Atún</span></div>
+                    <div class="profile-card"><strong>C</strong><span>Carlos Ruiz</span><span>5 visitas · Risotto Trufa</span></div>
+                    <div class="profile-card"><strong>M</strong><span>María López</span><span>23 visitas · Ceviche</span></div>
+                    <div class="profile-card"><strong>J</strong><span>James Wilson</span><span>3 visitas · Ossobuco</span></div>
+                  </div>
+                </div>
+                <div class="dashboard-panel" data-panel="carta">
+                  <div class="dashboard-stats">
+                    <div><strong>42</strong><span>Platos activos</span></div>
+                    <div><strong>6</strong><span>Categorías</span></div>
+                    <div><strong>Tartar</strong><span>Más vendido</span></div>
+                    <div><strong>68%</strong><span>Margen medio</span></div>
+                  </div>
+                  <div class="dashboard-list">
+                    <div class="dashboard-item"><span>Tartar de Atún Rojo</span><span>Entrantes</span><span>€24</span><span class="dot active"></span></div>
+                    <div class="dashboard-item"><span>Risotto de Trufa Negra</span><span>Principales</span><span>€32</span><span class="dot active"></span></div>
+                    <div class="dashboard-item"><span>Ceviche de Corvina</span><span>Entrantes</span><span>€22</span><span class="dot active"></span></div>
+                    <div class="dashboard-item"><span>Ossobuco Confitado</span><span>Principales</span><span>€38</span><span class="dot inactive"></span></div>
+                  </div>
+                </div>
+                <div class="dashboard-panel" data-panel="reportes">
+                  <div class="dashboard-stats">
+                    <div><strong>€48.2k</strong><span>Ingresos (mes)</span></div>
+                    <div><strong>1,832</strong><span>Reservas</span></div>
+                    <div><strong>€52</strong><span>Ticket medio</span></div>
+                    <div><strong>4.2%</strong><span>No-shows</span></div>
+                  </div>
+                  <div class="chart-grid">
+                    <div class="chart-bar" style="height:45%"><span>Lun</span></div>
+                    <div class="chart-bar" style="height:62%"><span>Mar</span></div>
+                    <div class="chart-bar" style="height:38%"><span>Mié</span></div>
+                    <div class="chart-bar" style="height:78%"><span>Jue</span></div>
+                    <div class="chart-bar" style="height:55%"><span>Vie</span></div>
+                    <div class="chart-bar" style="height:90%"><span>Sáb</span></div>
+                    <div class="chart-bar" style="height:72%"><span>Dom</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="opiniones" class="section container">
+          <div class="section-header">
+            <span class="section-label">Opiniones</span>
+            <h2>Lo que dicen los <span class="highlight">profesionales</span></h2>
+          </div>
+
+          <div class="testimonial-slider">
+            <article class="testimonial-card active" data-testimonial="0">
+              <div class="stars-row">★★★★★</div>
+              <p>"ReserVa transformó por completo la forma en que gestionamos nuestras reservas. El mapa de mesas en tiempo real y el preorder han reducido nuestras esperas un 60%. Nuestros clientes lo aman."</p>
+              <div class="testimonial-author">
+                <div class="avatar">E</div>
+                <div>
+                  <strong>Elena García</strong>
+                  <span>Propietaria · Grupo Gastronómico Sur</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card" data-testimonial="1">
+              <div class="stars-row">★★★★★</div>
+              <p>"La carta digital interactiva es una obra de arte. Los comensales preordenan antes de llegar y todo sale a tiempo. Es como tener un maître digital trabajando 24/7."</p>
+              <div class="testimonial-author">
+                <div class="avatar">M</div>
+                <div>
+                  <strong>Marcos Delgado</strong>
+                  <span>Chef Ejecutivo · Ossobuco Milano</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card" data-testimonial="2">
+              <div class="stars-row">★★★★★</div>
+              <p>"El dashboard es tan intuitivo que mi equipo lo dominó en un día. Los reportes nos han dado visibilidad sobre patrones que ni siquiera sabíamos que existían. Imprescindible."</p>
+              <div class="testimonial-author">
+                <div class="avatar">S</div>
+                <div>
+                  <strong>Sofia Chen</strong>
+                  <span>Directora · Sakura Omakase</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card" data-testimonial="3">
+              <div class="stars-row">★★★★★</div>
+              <p>"He visto muchas plataformas de reservas. Ninguna combina esta elegancia visual con una funcionalidad tan completa. ReserVa eleva el estándar de toda la industria."</p>
+              <div class="testimonial-author">
+                <div class="avatar">J</div>
+                <div>
+                  <strong>James Wilson</strong>
+                  <span>Food Critic · The Gourmet Review</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="testimonial-dots">
+            <button class="dot active" data-index="0"></button>
+            <button class="dot" data-index="1"></button>
+            <button class="dot" data-index="2"></button>
+            <button class="dot" data-index="3"></button>
+          </div>
+        </section>
+
+        <section id="contacto" class="cta">
+          <div class="cta-bg"></div>
+          <div class="cta-overlay"></div>
+          <div class="cta-glow"></div>
+          <div class="cta-content container">
+            <div class="cta-icon">🗓️</div>
+            <h2>Tu próxima cena <span class="highlight glow-text">empieza aquí</span></h2>
+            <p>Únete a los restaurantes más exclusivos que ya confían en ReserVa. Una plataforma diseñada por Velvet Code para elevar cada experiencia.</p>
+            <div class="cta-buttons">
+              <a href="#hero-form" class="button button-primary">Reservar mesa</a>
+              <a href="#como-funciona" class="button button-secondary">Ver demo</a>
+            </div>
+            <div class="cta-features">
+              <span>Sin comisiones por reserva</span>
+              <span>Configuración en 5 minutos</span>
+              <span>Soporte 24/7</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div>
+            <a href="#inicio" class="brand brand-footer">
+              <span class="brand-icon">V</span>
+              <span class="brand-label">Reser<span>Va</span></span>
+            </a>
+            <p>La plataforma premium para reservar mesas, consultar disponibilidad y preordenar platos en los restaurantes más exclusivos.</p>
+            <div class="social-links">
+              <a href="#">IG</a>
+              <a href="#">TW</a>
+              <a href="#">LI</a>
+              <a href="#">✉️</a>
+            </div>
+          </div>
+          <div>
+            <h4>Producto</h4>
+            <a href="#">Reservas</a>
+            <a href="#">Preorder</a>
+            <a href="#">Mapa de mesas</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Reportes</a>
+          </div>
+          <div>
+            <h4>Empresa</h4>
+            <a href="#">Sobre Velvet Code</a>
+            <a href="#">Blog</a>
+            <a href="#">Carreras</a>
+            <a href="#">Prensa</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Cookies</a>
+            <a href="#">GDPR</a>
+          </div>
+        </div>
+        <div class="footer-bottom container">
+          <p>© 2026 ReserVa · Desarrollado por Velvet Code</p>
+          <p>Diseñado para elevar la experiencia gastronómica</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
